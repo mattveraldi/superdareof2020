@@ -1,6 +1,6 @@
 
 # superdareof2020
-Ottieni le rispose corrette da https://friend2020.com/it e fingi diventa il miglior amico dell'anno con Python!
+Ottieni le rispose corrette da https://friend2020.com/it e diventa il miglior amico dell'anno con Python!
 
   **Prequisiti:**
     - python 2.7  (installalo da qui -> [Windows x86-64 MSI installer](https://www.python.org/ftp/python/2.7.16/python-2.7.16.amd64.msi) 
