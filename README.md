@@ -24,3 +24,15 @@ per definire l'**ESTETICA**, quindi i colori, tipografia, animazioni, etc. si ut
 Come è facilmente intuibile, **HTML e CSS** sono collegati tra loro, ***cooperano per insegnare al browser come mostrare i contenuti di una pagina web***.
 il *web scraper* è **un programma che estrae specifiche informazioni da una di queste pagine web**, nel nostro caso quella che contiene le domande a cui dovremmo rispondere,  e da essa estrae tutte le risposte corrette, proprio perchè in alcuni casi come questo, **l'informazione è contenuta proprio nel codice HTML**.
 Per programmarlo abbiamo usato il framework [Scrapy](https://scrapy.org/) che offre una serie di funzioni adeguate a raggiungere il nostro scopo.
+
+## Per quanto riguarda il codice
+
+la parte cruciale è 
+
+    css_class = ".correct"
+
+    clean_res = response.css(css_class).xpath("div/text()").extract()
+".correct" è il nome identificativo del componente HTML che si occupa di mostrare la struttura della risposta corretta (quando scegli la domanda, viene colorata in verde la risposta giusta ed eventualmente in rosso quella che hai sbagliato, proprio per questo nel codice HTML c'è la distinzione tra la risposta corretta ".correct" e tutte le altre).
+clean_res sarà un insieme di risposte corrette, per fare ciò Scrapy cercherà tutti gli elementi che hanno come id ".correct" tramite il codice response.css(css_class) e poi ne estrarrà il testo tramite il codice xpath("div/text").extract().
+
+
