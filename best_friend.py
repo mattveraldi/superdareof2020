@@ -10,5 +10,4 @@ class BestFriendSpider(scrapy.Spider):
         counter = 0
         for unicod in clean_res:
             counter += 1
-            #print correct answers
             print "Risposta numero " + str(counter) + ": " + unicod.encode("ascii", "replace")
